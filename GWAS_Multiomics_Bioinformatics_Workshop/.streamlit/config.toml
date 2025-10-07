@@ -1,0 +1,34 @@
+[global]
+
+# DataFrame serialization to enable Arrow support
+dataFrameSerialization = "legacy"
+
+# Enable wide mode by default
+wideMode = true
+
+# Page title and icon
+pageTitle = "GWAS & Multiomics Bioinformatics Workshop"
+pageIcon = "🧬"
+
+[theme]
+primaryColor = "#2E7D32"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F8F9FA"
+textColor = "#262730"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+maxMessageSize = 200
+enableStaticServing = true
+
+[client]
+showErrorDetails = false
+showSidebarNavigation = true

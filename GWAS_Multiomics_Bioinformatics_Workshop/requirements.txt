@@ -1,0 +1,85 @@
+# GWAS, Multiomics and Bioinformatics Workshop Requirements
+# Install with: pip install -r requirements.txt
+
+# Core Data Science Libraries
+pandas>=1.5.0
+numpy>=1.21.0
+scipy>=1.7.0
+scikit-learn>=1.1.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Bioinformatics and Computational Biology
+biopython>=1.79
+pysam>=0.19.0
+pyensembl>=1.8.0
+pyfaidx>=0.7.0
+
+# Statistical Genetics and GWAS
+statsmodels>=0.13.0
+pydigree>=0.2.2
+plinkio>=0.9.0
+
+# Multiomics Integration
+scanpy>=1.9.0          # Single-cell analysis
+anndata>=0.8.0         # Annotated data
+harmonypy>=0.0.5       # Integration
+mnnpy>=0.1.9.5         # Mutual nearest neighbors
+
+# Visualization and Dashboard Libraries
+streamlit>=1.10.0
+plotly>=5.8.0
+bokeh>=2.4.0
+altair>=4.2.0
+matplotlib-venn>=0.11.6
+
+# Machine Learning for Omics Data
+tensorflow>=2.8.0
+torch>=1.12.0
+xgboost>=1.6.0
+lightgbm>=3.3.0
+
+# GWAS and Genetic Analysis
+ldpred>=1.0.11
+gwaslab>=3.4.13
+pygwas>=1.0.4
+
+# Data Handling and I/O
+openpyxl>=3.0.0
+xlrd>=2.0.0
+requests>=2.27.0
+
+# Development and Testing
+jupyter>=1.0.0
+notebook>=6.4.0
+ipykernel>=6.9.0
+
+# Utility Libraries
+joblib>=1.1.0
+tqdm>=4.62.0
+
+# Quality Assurance
+pytest>=6.2.0
+black>=21.0.0         # Code formatting
+flake8>=4.0.0         # Linting
+
+# Interactive Learning (for exercises)
+ipywidgets>=7.6.0
+widgetsnbextension>=3.5.0
+
+# Additional Bioinformatics Tools
+pytabix>=0.0.2
+pybigwig>=0.3.18
+intervaltree>=3.1.0
+
+# Network Analysis (for biological networks)
+networkx>=2.8.0
+igraph>=0.9.0
+
+# Image Processing (for microscopy/multiomics imaging)
+opencv-python>=4.5.0
+scikit-image>=0.19.0
+
+# Version Compatibility
+# Python 3.8 or higher required
+# Compatible with macOS, Windows, Linux

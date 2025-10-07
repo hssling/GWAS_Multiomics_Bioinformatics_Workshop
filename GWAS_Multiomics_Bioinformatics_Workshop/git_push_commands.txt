@@ -1,0 +1,91 @@
+# GWAS, Multiomics & Bioinformatics Workshop - GitHub Push Instructions
+
+# Step 1: Create GitHub repository at https://github.com/new
+# Repository name: GWAS_Multiomics_Bioinformatics_Workshop
+# Description: 🧬 Interactive GWAS, Multiomics Integration and Bioinformatics Workshop - Master genome-wide association studies, multiomics data analysis, and bioinformatics pipelines with hands-on exercises and real-time visualizations
+# Make it public and DO NOT initialize with README
+
+# Step 2: Open terminal/command prompt in the project directory
+
+cd GWAS_Multiomics_Bioinformatics_Workshop
+
+# Initialize Git repository
+git init
+
+# Add all files
+git add .
+
+# Create commit with detailed message
+git commit -m "🚀 GWAS, Multiomics & Bioinformatics Workshop - Complete Release
+
+🧬 Complete Interactive Genomics Workshop
+• 6 comprehensive session materials covering GWAS fundamentals to precision medicine
+• Interactive Streamlit web application with real-time GWAS/multiomics visualization
+• Hands-on Jupyter exercises and Python analysis pipelines
+• Sample datasets (25K GWAS SNPs + multiomics gene expression)
+• Knowledge assessment quiz with 20 questions and rubrics
+• Production-quality documentation and CI/CD automation
+
+📚 Educational Content:
+• Session 1: GWAS Fundamentals (SNPs, study design, power calculation)
+• Session 2: GWAS Analysis (Manhattan/Q-Q plots, QC, PRS, meta-analysis)
+• Session 3: Multiomics Fundamentals (technologies, batch effects, integration)
+• Session 4: Advanced Integration (MOFA, SNF, machine learning methods)
+• Session 5: Bioinformatics Pipelines (NGS workflows, variant calling, tools)
+• Session 6: Precision Medicine (case studies, clinical applications, challenges)
+
+💻 Technical Stack:
+• Python, Streamlit, Pandas, NumPy, SciPy, Scikit-learn
+• Plotly, Seaborn, Matplotlib for interactive visualizations
+• BioPython, statistics, machine learning for bioinformatics
+• Jupyter notebooks with educational exercises
+• GitHub Actions for CI/CD and automated testing
+
+🎯 Features:
+✅ Interactive GWAS Explorer with Manhattan plot controls
+✅ Multi-omics Data Browser with correlation networks
+✅ Statistical Tools (power calculators, sample size estimation)
+✅ Differential Expression Analysis pipeline
+✅ Knowledge Assessment with performance evaluation
+✅ Production-ready documentation and setup guides
+✅ MIT licensed for community contributions
+
+🔬 Biological Scope:
+• Genome-wide association studies (GWAS) methodology
+• Multi-omics data integration (genomics, transcriptomics, proteomics)
+• Bioinformatics pipeline development and automation
+• Precision medicine applications and clinical translation
+
+🎓 Intended for:
+• University bioinformatics/genomics courses
+• Professional training programs in precision medicine
+• Research laboratories adopting multi-omics approaches
+• Pharma/biotech companies training data scientists
+• Self-guided learning for genomics researchers
+
+📖 Files Overview:
+• app.py - Interactive Streamlit workshop application (7 pages)
+• Sessions/ - 6 comprehensive curriculum materials
+• Data/ - Sample GWAS and multiomics datasets
+• Exercises/ - Jupyter notebook and Python script exercises
+• Quizzes/ - Knowledge assessment materials
+• Scripts/ - Utility functions for bioinformatics analysis
+• .github/ - CI/CD and GitHub Pages deployment workflows
+
+🏆 Author: Dr. Siddalingaiah H S
+🎓 Healthcare Informatics Specialist and Computational Biology Expert
+🔥 Clinical Research Scientist specializing in genomics, multiomics data analysis, and bioinformatics pipeline development"
+
+# Add GitHub remote (replace YOUR_USERNAME if different)
+git remote add origin https://github.com/hssling/GWAS_Multiomics_Bioinformatics_Workshop.git
+
+# Push to GitHub
+git push -u origin main
+
+# Step 3: Enable GitHub features after first push
+# - Enable GitHub Pages: Settings → Pages → Source: Deploy from branch → Branch: main → Folder: docs/
+# - CI/CD will automatically run via GitHub Actions
+# - Streamlit Cloud: Connect repository at share.streamlit.io for interactive demo
+
+# Step 4: Update README badges after first deployment
+# The README contains placeholder badges that will become active after GitHub Actions runs

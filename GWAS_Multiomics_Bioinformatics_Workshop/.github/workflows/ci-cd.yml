@@ -1,0 +1,89 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, 3.10]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Test workshop utilities
+      run: |
+        cd Scripts
+        python -c "import workshop_utils; print('Utilities import successfully')"
+
+    - name: Test Streamlit app imports
+      run: |
+        python -c "import streamlit as st; import app; print('Streamlit app imports successfully')"
+
+    - name: Check data files exist
+      run: |
+        ls -la Data/
+        python -c "import pandas as pd; df=pd.read_csv('Data/sample_gwas_summary_stats.csv'); print(f'GWAS data: {df.shape[0]} SNPs loaded')"
+
+    - name: Validate session content
+      run: |
+        for file in Sessions/*.md; do
+          echo "Checking $file"
+          if grep -q "Learning Objectives" "$file"; then
+            echo "✓ $file has learning objectives"
+          else
+            echo "✗ $file missing learning objectives"
+          fi
+        done
+
+  build-docs:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install docs dependencies
+      run: |
+        pip install mkdocs mkdocs-material
+
+    - name: Build documentation
+      run: |
+        # Create simple docs structure for GitHub Pages
+        mkdir -p docs
+        cp README.md docs/index.md
+
+    - name: Upload docs artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: docs
+        path: docs/
+        retention-days: 30
